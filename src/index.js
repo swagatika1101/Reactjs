@@ -1,20 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom";
-const fname = "P";
-const lname = "Swagatika";
 
-const num = 2;
+const Aname = "P Swagatika";
+const currentDate = new Date();
+const year = currentDate.getFullYear();
+const img = "https://picsum.photos/500/250";
+const customStyle = {
+  color: "Black",
+  fontSize: "30px",
+  border: "1px solid black"
+};
+
+customStyle.color = "grey";
 
 ReactDOM.render(
   <div>
-    <h1>My name is {fname + " " + lname}</h1>
-    <h1>My Hobbies are: </h1>
-    <ul>
-      <li>Dancing</li>
-      <li>Travelling</li>
-      <li>Cooking</li>
-    </ul>
-    <h1>My Lucky Number Is {Math.floor(Math.random() * 10)}</h1>
+    <h1 className="mainHeading">My Posters</h1>
+    <div>
+      <img alt="biriyani" src={img} />
+    </div>
+    <div>
+      <h3 style={customStyle}>footer</h3>
+      <p>Created by {Aname}</p>
+      <p>Copyright © {year}</p>
+    </div>
   </div>,
   document.getElementById("root")
 );
